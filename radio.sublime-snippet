@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+<div class="radio">
+  <label>
+    <input type="radio" name="${1:name}" id="${1}" value="" checked>
+    ${2:caption}
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="${3:name}" id="${3}" value="">
+    ${4}
+  </label>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_rf</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

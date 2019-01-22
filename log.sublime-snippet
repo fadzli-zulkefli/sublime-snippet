@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+
+//DATE
+\$TarikhLog = date("d-m-Y [h:i:s A]");
+\$day = substr(\$TarikhLog, 0, 2);
+\$month = substr(\$TarikhLog, 3,2);
+\$year = substr(\$TarikhLog, 6, 4);
+//IP
+\$ip = \$_SERVER['REMOTE_ADDR'];
+//Text Log File
+\$myFile = "\$month\$year.txt";
+\$fh = fopen(\$myFile, 'a') or die("can't open file");
+\$stringData = "$1 \n";//\$stringData = "\$month\$year|\$TarikhLog|\$NoKp|\$NoAkaunPencen|\$Tahun|\$ip|Tidak Berjaya \n";
+fwrite(\$fh, \$stringData);
+fclose(\$fh);
+//MySQL Log Data
+mysql_query("INSERT INTO $2 ($3) VALUES	('$4')");
+
+
+]]></content>
+	<tabTrigger>_log</tabTrigger>
+</snippet>

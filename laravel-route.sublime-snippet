@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+// ${1}	
+    Route::get('${1}', [
+	    'as' => 'route.get${1}',
+	    'uses' => '${1}Controller@get${1}'
+	]);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_lroute</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

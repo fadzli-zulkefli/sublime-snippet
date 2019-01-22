@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\$sql_insert= "INSERT INTO $1 ($2) VALUES ('$3')";
+mysqli_query(\$conn, \$sql_insert)
+]]></content>
+	<tabTrigger>_insert</tabTrigger>
+</snippet>

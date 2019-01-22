@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+\$file = fopen("$0","r");
+
+while(!feof(\$file))
+  {
+	   if (\$line = fgets(\$file)) // avoid blank line
+	  {
+	 	/////////////////// read txt separate by | ///////////////////
+	  	\$separate = explode("|",\$line);
+	 	echo \$separate[9];
+	 	/////////////////// end read txt separate by |  ///////////////////
+	  }
+  }
+
+fclose(\$file);
+]]></content>
+	<tabTrigger>_readtxt</tabTrigger>
+</snippet>

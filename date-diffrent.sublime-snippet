@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+function KiraTempohService(y,x) {
+      var a = moment(x);
+      var b = moment(y);
+
+      var diffDuration = moment.duration(a.diff(b));
+
+      var jumlahHari = (a.diff(b,'days'));
+      var jumlahBulan = (a.diff(b,'months'));
+      var jumlahTahun = (a.diff(b,'years'));
+      console.log(jumlahBulan); // 8 years
+
+      \$("#txtJumlahPerkhidmatan").val(jumlahBulan);
+
+      //dalam bentuk tahun bulan hari
+      console.log(diffDuration.years()); // 8 years
+      console.log(diffDuration.months()); // 5 months
+      console.log(diffDuration.days()); // 2 days 
+    }
+]]></content>
+	<tabTrigger>_datediffrent</tabTrigger>
+</snippet>

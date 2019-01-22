@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+\$(".${1:parent_class_name}").on('change','#${2:child_id_name}',function() {
+
+    \$.ajax({
+    	type: "GET",
+    	dataType: "html",
+    	url: '/${3:url_address}',
+    	data: {'${4:menu}': \$("#${5:id_selector}").val() },
+    	beforeSend: function(){
+	     	\$("#loading").show();
+	  	 },
+    	success: function(response) 
+        {	
+        	\$("#loading").hide();   	
+        }
+    });
+
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_ajax</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

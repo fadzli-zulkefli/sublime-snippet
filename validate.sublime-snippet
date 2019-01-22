@@ -1,0 +1,40 @@
+<snippet>
+	<content><![CDATA[
+    
+    if(\$_POST)
+    {
+        \$errors = array();
+
+        if(empty(\$_POST['firstName']))
+        {
+            \$errors['firstName1'] = "Your first name cannot be empty";
+        }
+        if(empty(\$_POST['email']))
+        {
+            \$errors['email1'] = "Email cannot be empty";
+        }
+        if(strlen(\$_POST['email']) < 6)
+        {
+            \$errors['email2'] = "Email must be atleat 6 characters long";
+        }
+
+        if(empty(\$_POST['password']))
+        {
+            \$errors['password1'] = "Password cannot be empty";
+        }
+        if(strlen(\$_POST['password']) < 8)
+        {
+            \$errors['password2'] = "Password must be atlest 8 characters long";
+        }
+
+        /* if success */
+        if(count(\$errors) == 0)
+        {
+            header("Location: success.php");
+            exit();
+        }
+    }
+
+]]></content>
+	<tabTrigger>_validate</tabTrigger>
+</snippet>

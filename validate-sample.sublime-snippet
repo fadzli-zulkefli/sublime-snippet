@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+    <div class="form-group">
+		<h4 class="text-center">Nama</h4>
+		<label for="nama" class="sr-only" >Nama</label>
+		<input type="text" name="nama" id="input" class="form-control text-center" value="<?php if(isset(\$_POST['nama'])) echo \$_POST['nama']; ?>" title="" placeholder="Sila Nama anda" >	
+		<p><?php if(isset(\$errors['nama'])) echo "<div class='text-center'>.".\$errors['nama']."</div>" ?></p>			
+	</div>
+
+	 OR
+
+	 if(!empty(\$errors))
+	{
+		foreach(\$errors as \$value)
+		{
+			echo \$value;
+		}
+	}
+]]></content>
+	<tabTrigger>_validatesample</tabTrigger>
+</snippet>

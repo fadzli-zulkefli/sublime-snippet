@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\$sql_delete= "DELETE FROM $1 WHERE $2=$3";
+mysqli_query(\$conn, \$sql_delete)
+]]></content>
+	<tabTrigger>_delete</tabTrigger>
+</snippet>

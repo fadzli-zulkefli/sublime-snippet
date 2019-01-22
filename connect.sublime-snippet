@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\$conn = mysqli_connect("localhost","root","","$0");	
+echo \$message = (mysqli_connect_errno()) ?  "Failed ".mysqli_connect_error() : "success"; 
+]]></content>
+	<tabTrigger>_connect</tabTrigger>
+</snippet>

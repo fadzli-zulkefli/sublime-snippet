@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+date_default_timezone_set("Asia/Kuala_Lumpur");
+\$tarikh = date("Y-m-d H:i:s"); //store database format
+\$hari = substr(\$tarikh, 8,2); //hari
+\$bulan = substr(\$tarikh, 5,2); //bulan
+\$tahun = substr(\$tarikh, 0,4); //tahun
+\$masa = substr(\$tarikh, 11,8);//masa
+]]></content>
+	<tabTrigger>_date</tabTrigger>
+</snippet>
