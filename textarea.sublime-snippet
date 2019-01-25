@@ -2,8 +2,7 @@
 	<content><![CDATA[
 <div class="form-group">		
 	<label for="${1:name}">${2:${1/\b(\w)/\U$1/g}}:</label>
-	<input type="password" name="${1}" id="${1}" class="form-control" value="{{ old('${1}') }}" placeholder="Sila masukkan ${1}">
-	<textarea class="form-control" rows="5" id="${1}"></textarea>
+	<textarea class="form-control" rows="5" id="${1}" name="${1}"></textarea>
 </div>
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
