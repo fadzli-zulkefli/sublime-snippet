@@ -1,17 +1,17 @@
 <snippet>
-	<content><![CDATA[
-<div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		@if (\$errors->any())
-			<div class="alert alert-danger fade in">
-				<a href="#" class="close" data-dismiss="alert">&times;</a>
-				@foreach(\$errors->all() as \$error)
-					<li>{{ \$error }}</li>
-				@endforeach
-			</div>
-		@endif
+<content><![CDATA[
+@if (\$errors->any())
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="alert alert-danger fade in">
+					<a href="#" class="close" data-dismiss="alert">&times;</a>
+					@foreach(\$errors->all() as \$error)
+						<li>{{ \$error }}</li>
+					@endforeach
+				</div>
+		</div>
 	</div>
-</div>
+@endif
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>_lerr</tabTrigger>
